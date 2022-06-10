@@ -659,15 +659,15 @@ class Detections:
                         else:  # all others
                             color = ''
                             if conf > 0.8:
-                                color = '#C0001'
+                                color = (92, 0, 1)
                             elif conf > 0.7:
-                                color = '#8E1F20'
+                                color = (142, 31, 32)
                             elif conf > 0.6:
-                                color = '#D82C20'
+                                color = (216, 44, 32)
                             elif conf > 0.5:
-                                color = '#E66C37'
+                                color = (230, 108, 55)
                             else:
-                                color = '#FFA500'
+                                color = (255, 165, 0)
 
                             annotator.box_label(box, label if labels else '', color=color)
                     im = annotator.im
