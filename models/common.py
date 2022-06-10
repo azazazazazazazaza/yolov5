@@ -662,9 +662,9 @@ class Detections:
                                 color = (92, 0, 1)
                             elif conf > 0.7:
                                 color = (142, 31, 32)
-                            elif conf > 0.6:
+                            elif conf > 0.57:
                                 color = (216, 44, 32)
-                            elif conf > 0.5:
+                            elif conf > 0.47:
                                 color = (230, 108, 55)
                             else:
                                 color = (255, 165, 0)
