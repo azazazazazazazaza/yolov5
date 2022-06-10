@@ -660,13 +660,13 @@ class Detections:
                             color = ''
                             if conf > 0.8:
                                 color = '#C0001'
-                            else if conf > 0.7:
+                            elif conf > 0.7:
                                 color = '#8E1F20'
-                            else if conf > 0.6:
+                            elif conf > 0.6:
                                 color = '#D82C20'
-                            else if conf > 0.5:
+                            elif conf > 0.5:
                                 color = '#E66C37'
-                            else if conf > 0.4:
+                            else:
                                 color = '#FFA500'
 
                             annotator.box_label(box, label if labels else '', color=color)
