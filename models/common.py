@@ -657,7 +657,19 @@ class Detections:
                                 'label': label,
                                 'im': save_one_box(box, im, file=file, save=save)})
                         else:  # all others
-                            annotator.box_label(box, label if labels else '', color=colors(cls))
+                            color = ''
+                            if conf > 0.8:
+                                color = '#C0001'
+                            else if conf > 0.7:
+                                color = '#8E1F20'
+                            else if conf > 0.6:
+                                color = '#D82C20'
+                            else if conf > 0.5:
+                                color = '#E66C37'
+                            else if conf > 0.4:
+                                color = '#FFA500'
+
+                            annotator.box_label(box, label if labels else '', color=color)
                     im = annotator.im
             else:
                 s += '(no detections)'
